@@ -1,0 +1,65 @@
+
+/* === CSS Reset ========== */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p { margin:0; padding:0 }
+input, button, select, textarea, a:fouse {outline:none}
+li {list-style:none;}
+img {border:none;}
+textarea {resize:none;}
+body { margin: 0; font: 12px "微软雅黑";}
+/* === End CSS Reset ========== */
+
+body{width:100%;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix{*zoom:1;}
+
+.container{
+    width:320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main2{
+    background: url("../images/main0.gif") no-repeat center;
+    background-size:100%;
+    height: 260px;
+    width:320px;
+    margin:0 auto;
+}
+.num{
+    position: absolute;
+    top: 80px;
+    width: 210px;
+    height: 67px;
+    overflow: hidden;
+}
+.num-con{
+    position: relative;
+    top:-274px;
+}
+.num-img{
+    background: url("../images/num1.png") no-repeat;
+    width: 210px;
+    height: 750px;
+}
+.num2{
+    left:12%;
+}
+.main3-btn{
+    cursor: pointer;
+    height: 39px;
+    left: 25%;
+    position: absolute;
+    top: -71px;
+    width: 152px;
+}
