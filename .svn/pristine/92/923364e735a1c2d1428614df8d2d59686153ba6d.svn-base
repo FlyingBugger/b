@@ -1,0 +1,11 @@
+CACHE MANIFEST
+CACHE:
+static/img/body_bg.jpg
+static/img/cj_bg.png
+static/img/jt2.png
+
+NETWORK: prize.php
+FALLBACK:
+index.html
+
+

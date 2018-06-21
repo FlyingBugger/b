@@ -1,0 +1,998 @@
+        /* reset */
+        /*body {
+	position:relative
+}
+*/
+        
+        * {
+        	margin: 0;
+        	padding: 0
+        }
+        
+        body {
+        	background-color: #f5f6f7;
+        }
+        /* 初始化标签在所有浏览器中的margin、padding值 */
+        
+        fieldset,img {
+        	border: 0 none
+        }
+        /* 重置fieldset（表单分组）、图片的边框为0*/
+        
+        dl,ul,ol,menu,li {
+        	list-style: none
+        }
+        /* 重置类表前导符号为onne,menu在HTML5中有效 */
+        
+        blockquote,q {
+        	quotes: none
+        }
+        /* 重置嵌套引用的引号类型 */
+        
+        blockquote:before,blockquote:after,q:before,q:after {
+        	content: '';
+        	content: none
+        }
+        /* 重置嵌套引用*/
+        
+        button {
+        	border: 0 none;
+        	background-color: transparent;
+        	cursor: pointer
+        }
+        /* 重置表单button按钮效果 */
+        /* 重置body 页面背景为白色 */
+        
+        body,th,td,input,select,textarea,button {
+        	font-size: 12px;
+        	line-height: 1;
+        	font-family: "微软雅黑", "黑体", "宋体";
+        	color: #666
+        }
+        /* 重置页面文字属性 */
+        
+        a {
+        	color: #666;
+        	text-decoration: none
+        }
+        /* 重置链接a标签 */
+        
+        a:active,
+        a:hover {
+        	text-decoration: none
+        }
+        /* 重置链接a标签的鼠标滑动效果 */
+        
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        var {
+        	font-style: normal;
+        	font-weight: normal
+        }
+        /* 重置样式标签的样式 */
+        
+        caption {
+        	display: none;
+        }
+        /* 重置表格标题为隐藏 */
+        
+        table {
+        	width: 100%;
+        	border-collapse: collapse;
+        	border-spacing: 0;
+        	table-layout: fixed;
+        }
+        /* 重置table属性 */
+        
+        img {
+        	vertical-align: top
+        }
+        /* 图片在当前行内的垂直位置 */
+        
+        .li-border {
+        	border-bottom: 1px solid #efefef;
+        }
+        
+        body {
+        	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        	-webkit-appearance: none;
+        }
+        /* 页面设置 */
+        /* 取消a标签点击后的虚线框 */
+        
+        a {
+        	outline: none;
+        }
+        
+        a:active {
+        	star: expression(this.onFocus=this.blur());
+        }
+        /*清除浮动*/
+        
+        .clear {
+        	clear: both;
+        }
+        /*清除浮动--推荐使用*/
+        
+        .clearfix:before,
+        .clearfix:after {
+        	content: '';
+        	display: table;
+        }
+        
+        .clearfix:after {
+        	clear: both;
+        }
+        
+        .l {
+        	float: left;
+        }
+        
+        .r {
+        	float: right;
+        }
+        
+        .hide {
+        	display: none;
+        }
+        
+        .show {
+        	display: block;
+        }
+        
+        .show-lb {
+        	display: inline-block;
+        }
+        /**颜色**/
+        
+        .col18d {
+        	color: #18d0fd;
+        }
+        
+        .col999 {
+        	color: #999;
+        }
+        
+        .colfff {
+        	color: #fff;
+        }
+        
+        .col222 {
+        	color: #222;
+        }
+        
+        .col666 {
+        	color: #666;
+        }
+        
+        .col-F75 {
+        	color: #F75C51
+        }
+        
+        .col-2B9 {
+        	color: #2B9CED
+        }
+        
+        .col-FF7 {
+        	color: #FF7D1F
+        }
+        
+        .col-999 {
+        	color: #999999
+        }
+        
+        .bgcfff {
+        	background: #fff;
+        }
+        
+        .bgcf5f {
+        	background: #f5f5f5;
+        }
+        
+        .bgcfef {
+        	background: #fefefe;
+        }
+        
+        .bgcfdb {
+        	background: #fdb44c;
+        }
+        
+        .bgcfdd {
+        	background: #fdd07f;
+        }
+        /**透明度**/
+        
+        .opac10 {
+        	opacity: 1;
+        }
+        
+        .opac06 {
+        	opacity: .6;
+        }
+        
+        .opac03 {
+        	opacity: .3;
+        }
+        
+        .bgcfdd-radius {
+        	background: #fdd07f;
+        	border-radius: 2rem;
+        	-webkit-border-radius: 2rem;
+        	-moz-border-radius: 2rem;
+        	-webkit-appearance: none;
+        	display: inline-block;
+        	width: 1.5rem;
+        	height: 1.5rem;
+        	line-height: 1.5rem;
+        }
+        /* 大转盘样式 */
+        
+        .banner {
+        	display: block;
+        	width: 95%;
+        	margin-left: auto;
+        	margin-right: auto;
+        	margin-bottom: 20px;
+        }
+        
+        .banner .turnplate {
+        	display: block;
+        	width: 100%;
+        	position: relative;
+        }
+        
+        .banner .turnplate canvas.item {
+        	width: 100%;
+        }
+        
+        .banner .turnplate img.pointer {
+        	position: absolute;
+        	width: 36%;
+        	height: 40%;
+        	left: 32%;
+        	top: 28%;
+        }
+        
+        .button {
+        	position: fixed;
+        	left: 50%;
+        	top: 80%;
+        	width: 160px;
+        	margin-left: -80px;
+        }
+        
+        .ticket {
+        	background: #fa7471;
+        	color: #FFFFFF;
+        	font-size: 22px;
+        	border-radius: 10px;
+        	padding: 10px 20px;
+        	letter-spacing: 2px;
+        	-moz-box-shadow: 0px 5px 5px #000000a3;
+        	/* 老的 Firefox */
+        	box-shadow: 0px 5px 5px #000000a3;
+        }
+        
+        @media screen and (max-width: 320px) {
+        	.button {
+        		position: fixed;
+        		left: 0;
+        		top: 80%;
+        		width: 160px;
+        		margin-left: -80px;
+        		display: block;
+        	}
+        }
+        
+        @media screen and (min-width: 321px) and (max-width: 375px) {
+        	.button {
+        		position: fixed;
+        		left: 50%;
+        		top: 90%;
+        		width: 160px;
+        		margin-left: -80px;
+        		display: block;
+        	}
+        }
+        
+        @media screen and (min-width: 376px) {
+        	.button {
+        		position: fixed;
+        		left: 50%;
+        		top: 80%;
+        		width: 160px;
+        		margin-left: -80px;
+        		display: block;
+        	}
+        }
+        
+        @media screen and (max-height: 480px) {
+        	.button {
+        		position: fixed;
+        		left: 50%;
+        		top: 80%;
+        		width: 160px;
+        		margin-left: -80px;
+        		display: block;
+        	}
+        }
+        
+        #mark {
+        	width: 100%;
+        	height: 100%;
+        	background: rgba(0, 0, 0, 0.5);
+        	position: fixed;
+        	top: 0;
+        	left: 0;
+        	display: none;
+        }
+        
+        .red-img {
+        	position: fixed;
+        	top: 10%;
+        	left: 5%;
+        	width: 90%;
+        }
+        /**shake动画**/
+        
+        .toast.shake {
+        	animation: shake .3s ease;
+        	-webkit-animation: shake .3s ease;
+        	-ms-animation: shake .3s ease;
+        	-moz-animation: shake .3s ease;
+        }
+        
+        @keyframes shake {
+        	0% {
+        		transform: translateX(-2%);
+        	}
+        	10% {
+        		transform: translateX(0);
+        	}
+        	20% {
+        		transform: translateX(2%);
+        	}
+        	30% {
+        		transform: translateX(0);
+        	}
+        	40% {
+        		transform: translateX(-2%);
+        	}
+        	50% {
+        		transform: translateX(0);
+        	}
+        	60% {
+        		transform: translateX(2%);
+        	}
+        	70% {
+        		transform: translateX(0);
+        	}
+        	80% {
+        		transform: translateX(-2%);
+        	}
+        	90% {
+        		transform: translateX(0);
+        	}
+        	100% {
+        		transform: translateX(2%);
+        	}
+        }
+        
+        @-webkit-keyframes shake {
+        	0% {
+        		-webkit-transform: translateX(-2%);
+        	}
+        	10% {
+        		-webkit-transform: translateX(0);
+        	}
+        	20% {
+        		-webkit-transform: translateX(2%);
+        	}
+        	30% {
+        		-webkit-transform: translateX(0);
+        	}
+        	40% {
+        		-webkit-transform: translateX(-2%);
+        	}
+        	50% {
+        		-webkit-transform: translateX(0);
+        	}
+        	60% {
+        		-webkit-transform: translateX(2%);
+        	}
+        	70% {
+        		-webkit-transform: translateX(0);
+        	}
+        	80% {
+        		-webkit-transform: translateX(-2%);
+        	}
+        	90% {
+        		-webkit-transform: translateX(0);
+        	}
+        	100% {
+        		-webkit-transform: translateX(2%);
+        	}
+        }
+        
+        @-ms-keyframes shake {
+        	0% {
+        		-ms-transform: translateX(-2%);
+        	}
+        	10% {
+        		-ms-transform: translateX(0);
+        	}
+        	20% {
+        		-ms-transform: translateX(2%);
+        	}
+        	30% {
+        		-ms-transform: translateX(0);
+        	}
+        	40% {
+        		-ms-transform: translateX(-2%);
+        	}
+        	50% {
+        		-ms-transform: translateX(0);
+        	}
+        	60% {
+        		-ms-transform: translateX(2%);
+        	}
+        	70% {
+        		-ms-transform: translateX(0);
+        	}
+        	80% {
+        		-ms-transform: translateX(-2%);
+        	}
+        	90% {
+        		-ms-transform: translateX(0);
+        	}
+        	100% {
+        		-ms-transform: translateX(2%);
+        	}
+        }
+        
+        @-moz-keyframes shake {
+        	0% {
+        		-moz-keyframes: translateX(-2%);
+        	}
+        	10% {
+        		-moz-keyframes: translateX(0);
+        	}
+        	20% {
+        		-moz-keyframes: translateX(2%);
+        	}
+        	30% {
+        		-moz-keyframes: translateX(0);
+        	}
+        	40% {
+        		-moz-keyframes: translateX(-2%);
+        	}
+        	50% {
+        		-moz-keyframes: translateX(0);
+        	}
+        	60% {
+        		-moz-keyframes: translateX(2%);
+        	}
+        	70% {
+        		-moz-keyframes: translateX(0);
+        	}
+        	80% {
+        		-moz-keyframes: translateX(-2%);
+        	}
+        	90% {
+        		-moz-keyframes: translateX(0);
+        	}
+        	100% {
+        		-moz-keyframes: translateX(2%);
+        	}
+        }
+        /*Loading动画及遮罩层*/
+        
+        .opacity-bg {
+        	position: fixed;
+        	top: 0;
+        	left: 0;
+        	z-index: 1314;
+        	background-color: #000;
+        	opacity: 0.2;
+        	width: 100%;
+        	height: 100%;
+        }
+        
+        .spinner {
+        	z-index: 13140;
+        	position: fixed;
+        	left: 50%;
+        	top: 50%;
+        	transform: translate(-50%, -50%);
+        	-webkit-transform: translate(-50%, -50%);
+        	width: 4rem;
+        	text-align: center;
+        }
+        
+        .spinner>div {
+        	width: .5rem;
+        	height: .5rem;
+        	background: linear-gradient(to right, #BF74F7, #996CF5);
+        	border-radius: 100%;
+        	display: inline-block;
+        	-webkit-animation: bouncedelay 24s infinite ease-in-out;
+        	animation: bouncedelay 2s infinite ease-in-out;
+        	/* Prevent first frame from flickering when animation starts */
+        	-webkit-animation-fill-mode: both;
+        	animation-fill-mode: both;
+        }
+        
+        .spinner .bounce1 {
+        	-webkit-animation-delay: -0.32s;
+        	animation-delay: -0.32s;
+        }
+        
+        .spinner .bounce2 {
+        	-webkit-animation-delay: -0.16s;
+        	animation-delay: -0.16s;
+        }
+        
+        @-webkit-keyframes bouncedelay {
+        	0%,
+        	80%,
+        	100% {
+        		-webkit-transform: scale(0.0)
+        	}
+        	40% {
+        		-webkit-transform: scale(1.0)
+        	}
+        }
+        
+        @keyframes bouncedelay {
+        	0%,
+        	80%,
+        	100% {
+        		transform: scale(0.0);
+        		-webkit-transform: scale(0.0);
+        	}
+        	40% {
+        		transform: scale(1.0);
+        		-webkit-transform: scale(1.0);
+        	}
+        }
+        /*toast提示*/
+        /*100*/
+        
+        .tips {
+        	width: 80%;
+        	height: auto;
+        	line-height: 2em;
+        	display: inline-block;
+        	position: fixed;
+        	font-size: .26rem;
+        	left: 0;
+        	right: 0;
+        	margin: auto;
+        	bottom: .8rem;
+        	z-index: 131452000;
+        	text-align: center;
+        	display: none;
+        }
+        
+        .tips .tips-in {
+        	height: auto;
+        	line-height: 2em;
+        	display: inline-block;
+        	margin: 0 auto;
+        	background-color: #666;
+        	-webkit-border-radius: .1rem;
+        	-moz-border-radius: .1rem;
+        	-webkit-border-radius: .1rem;
+        	-moz-border-radius: .1rem;
+        	font-size: .24rem;
+        	color: #fff;
+        	padding: .02rem .2rem;
+        }
+        /*40*/
+        
+        .toast {
+        	width: 18rem;
+        	height: 2rem;
+        	line-height: 2rem;
+        	display: inline-block;
+        	position: fixed;
+        	font-size: .65rem;
+        	left: 0;
+        	bottom: 4.25rem;
+        	z-index: 111111;
+        	text-align: center;
+        	display: none;
+        }
+        
+        .toast .toast-su {
+        	height: 2rem;
+        	line-height: 2rem;
+        	display: inline-block;
+        	margin: 0 auto;
+        	background-color: #666;
+        	border: 0.05rem solid #dfdfdf;
+        	-webkit-border-radius: .25rem;
+        	-moz-border-radius: .25rem;
+        	-webkit-border-radius: .25rem;
+        	-moz-border-radius: .25rem;
+        	font-size: .6rem;
+        	color: #fff;
+        	padding-left: .5rem;
+        	padding-right: .5rem;
+        }
+        /*无数据提示*/
+        
+        .nomore {
+        	position: absolute;
+        	top: 45%;
+        	left: 50%;
+        	transform: translate(-50%, -50%);
+        }
+        
+        .nomore img {
+        	width: 2.5rem;
+        	height: 2rem;
+        }
+        
+        .nomore p {
+        	font-size: .32rem;
+        	margin-top: .2rem;
+        	color: #999;
+        }
+        /*flex布局*/
+        /*设置flex容器和定义方向*/
+        /* 父元素-flex容器 */
+        
+        .flex {
+        	display: box;
+        	/* OLD - Android 4.4- */
+        	display: -webkit-box;
+        	/* OLD - iOS 6-,Safari 3.1-6 */
+        	display: -moz-box;
+        	/* OLD - Firefox 19- (buggy but mostly works) */
+        	display: -ms-flexbox;
+        	/* TWEENER - IE 10 */
+        	display: -webkit-flex;
+        	/* NEW - Chrome */
+        	display: flex;
+        	/* NEW,Spec - Opera 12.1,Firefox 20+ */
+        }
+        /* 父元素-横向排列（主轴） */
+        
+        .flex-h {
+        	display: box;
+        	/* OLD - Android 4.4- */
+        	display: -webkit-box;
+        	/* OLD - iOS 6-,Safari 3.1-6 */
+        	display: -moz-box;
+        	/* OLD - Firefox 19- (buggy but mostly works) */
+        	display: -ms-flexbox;
+        	/* TWEENER - IE 10 */
+        	display: -webkit-flex;
+        	/* NEW - Chrome */
+        	display: flex;
+        	/* NEW,Spec - Opera 12.1,Firefox 20+ */
+        	/* 09版 */
+        	-webkit-box-orient: horizontal;
+        	/* 12版 */
+        	-webkit-flex-direction: row;
+        	-moz-flex-direction: row;
+        	-ms-flex-direction: row;
+        	-o-flex-direction: row;
+        	flex-direction: row;
+        }
+        /* 父元素-纵向排列（主轴） */
+        
+        .flex-v {
+        	display: box;
+        	/* OLD - Android 4.4- */
+        	display: -webkit-box;
+        	/* OLD - iOS 6-,Safari 3.1-6 */
+        	display: -moz-box;
+        	/* OLD - Firefox 19- (buggy but mostly works) */
+        	display: -ms-flexbox;
+        	/* TWEENER - IE 10 */
+        	display: -webkit-flex;
+        	/* NEW - Chrome */
+        	display: flex;
+        	/* NEW,Spec - Opera 12.1,Firefox 20+ */
+        	/* 09版 */
+        	-webkit-box-orient: vertical;
+        	/* 12版 */
+        	-webkit-flex-direction: column;
+        	-moz-flex-direction: column;
+        	-ms-flex-direction: column;
+        	-o-flex-direction: column;
+        	flex-direction: column;
+        }
+        /*现在不常用*/
+        /* 父元素-竖直居中（主轴是横向才生效） */
+        
+        .flex-vc {
+        	/* 09版 */
+        	-webkit-box-align: center;
+        	/* 12版 */
+        	-webkit-align-items: center;
+        	-moz-align-items: center;
+        	-ms-align-items: center;
+        	-o-align-items: center;
+        	align-items: center;
+        }
+        /* 父元素-水平居中（主轴是横向才生效） */
+        
+        .flex-hc {
+        	/* 09版 */
+        	-webkit-box-pack: center;
+        	/* 12版 */
+        	-webkit-justify-content: center;
+        	-moz-justify-content: center;
+        	-ms-justify-content: center;
+        	-o-justify-content: center;
+        	justify-content: center;
+        	/* 其它取值如下： align-items	 主轴原点方向对齐 flex-end		主轴延伸方向对齐 space-between   等间距排列，首尾不留白 space-around	等间距排列，首尾留白 */
+        }
+        /* 父元素-水平居左（主轴是横向才生效） */
+        
+        .flex-hr {
+        	/* 09版 */
+        	-webkit-box-pack: start;
+        	/* 12版 */
+        	-webkit-justify-content: flex-start;
+        	-moz-justify-content: start;
+        	-ms-justify-content: start;
+        	-o-justify-content: start;
+        	justify-content: flex-start;
+        	/* 其它取值如下： align-items	 主轴原点方向对齐 flex-end		主轴延伸方向对齐 space-between   等间距排列，首尾不留白 space-around	等间距排列，首尾留白 */
+        }
+        /*现在常用*/
+        /*主轴是水平*/
+        /*flex 水平居中&垂直居中 兼容写法*/
+        
+        .flex-hc-vc {
+        	display: box;
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-box-align: center;
+        	-webkit-align-items: center;
+        	-moz-align-items: center;
+        	-ms-align-items: center;
+        	-o-align-items: center;
+        	align-items: center;
+        	-webkit-box-pack: center;
+        	-webkit-justify-content: center;
+        	-moz-justify-content: center;
+        	-ms-justify-content: center;
+        	-o-justify-content: center;
+        	justify-content: center;
+        }
+        /*flex 水平居左&垂直居中 兼容写法*/
+        
+        .flex-hl-vc {
+        	display: box;
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-box-align: center;
+        	-webkit-align-items: center;
+        	-moz-align-items: center;
+        	-ms-align-items: center;
+        	-o-align-items: center;
+        	align-items: center;
+        	-webkit-box-pack: start;
+        	-webkit-justify-content: flex-start;
+        	-moz-justify-content: start;
+        	-ms-justify-content: start;
+        	-o-justify-content: start;
+        	justify-content: flex-start;
+        }
+        /*flex 水平居右&垂直居中 兼容写法*/
+        
+        .flex-hr-vc {
+        	display: box;
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-box-align: center;
+        	-webkit-align-items: center;
+        	-moz-align-items: center;
+        	-ms-align-items: center;
+        	-o-align-items: center;
+        	align-items: center;
+        	-webkit-box-pack: end;
+        	-webkit-justify-content: flex-end;
+        	-moz-justify-content: end;
+        	-ms-justify-content: end;
+        	-o-justify-content: end;
+        	justify-content: flex-end;
+        }
+        /*flex 水平等间距排列，首尾不留白&垂直居中 兼容写法*/
+        
+        .flex-hb-vc {
+        	display: box;
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-box-align: center;
+        	-webkit-align-items: center;
+        	-moz-align-items: center;
+        	-ms-align-items: center;
+        	-o-align-items: center;
+        	align-items: center;
+        	-webkit-box-pack: space-between;
+        	-webkit-justify-content: space-between;
+        	-moz-justify-content: space-between;
+        	-ms-justify-content: space-between;
+        	-o-justify-content: space-between;
+        	justify-content: space-between;
+        	background: #eeeeee;
+        }
+        /*flex 水平等间距排列，首尾留白&垂直居中 兼容写法*/
+        
+        .flex-ha-vc {
+        	display: box;
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-box-align: center;
+        	-webkit-align-items: center;
+        	-moz-align-items: center;
+        	-ms-align-items: center;
+        	-o-align-items: center;
+        	align-items: center;
+        	-webkit-box-pack: space-around;
+        	-webkit-justify-content: space-around;
+        	-moz-justify-content: space-around;
+        	-ms-justify-content: space-around;
+        	-o-justify-content: space-around;
+        	justify-content: space-around;
+        }
+        /*主轴是垂直*/
+        
+        .flex-hc-vl {
+        	display: box;
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-box-align: start;
+        	-webkit-align-items: flex-start;
+        	-moz-align-items: start;
+        	-ms-align-items: start;
+        	-o-align-items: start;
+        	align-items: flex-start;
+        	-webkit-box-pack: center;
+        	-webkit-justify-content: center;
+        	-moz-justify-content: center;
+        	-ms-justify-content: center;
+        	-o-justify-content: center;
+        	justify-content: center;
+        }
+        /* 父元素-横向换行 */
+        
+        .flex-hw {
+        	/* 09版 */
+        	/*-webkit-box-lines:multiple;
+	*/
+        	/* 12版 */
+        	-webkit-flex-wrap: wrap;
+        	-moz-flex-wrap: wrap;
+        	-ms-flex-wrap: wrap;
+        	-o-flex-wrap: wrap;
+        	flex-wrap: wrap;
+        }
+        /* 子元素 单独操作 */
+        
+        .align-self-right {
+        	-webkit-align-self: flex-end;
+        	align-self: flex-end;
+        }
+        
+        .align-self-left {
+        	-webkit-align-self: flex-start;
+        	align-self: flex-start;
+        }
+        /* 子元素-平均分栏 */
+        
+        .flex1 {
+        	-webkit-box-flex: 1;
+        	/* OLD - iOS 6-,Safari 3.1-6 */
+        	-moz-box-flex: 1;
+        	/* OLD - Firefox 19- */
+        	width: 20%;
+        	/* For old syntax,otherwise collapses. */
+        	-webkit-flex: 1;
+        	/* Chrome */
+        	-ms-flex: 1;
+        	/* IE 10 */
+        	flex: 1;
+        	/* NEW,Spec - Opera 12.1,Firefox 20+ */
+        }
+        
+        .flex2 {
+        	-webkit-box-flex: 2;
+        	/* OLD - iOS 6-,Safari 3.1-6 */
+        	-moz-box-flex: 2;
+        	/* OLD - Firefox 19- */
+        	width: 40%;
+        	/* For old syntax,otherwise collapses. */
+        	-webkit-flex: 2;
+        	/* Chrome */
+        	-ms-flex: 2;
+        	/* IE 10 */
+        	flex: 2;
+        	/* NEW,Spec - Opera 12.1,Firefox 20+ */
+        }
+        
+        .tabs-container li {
+        	height: 50px;
+        	border-right: 1px solid #FFFFFF;
+        }
+        
+        .tabs-container li:last-child {
+        	border: none;
+        }
+        
+        .main-items {
+        	width: 100%;
+        	background-color: #ffffff;
+        }
+        
+        .hide {
+        	display: none
+        }
+        
+        .show {
+        	display: block
+        }
+        
+        .active {
+        	background-color: #ffffff;
+        	color: #2b9ced;
+        } 
+         /*优惠券*/
+       .couponH{
+       	padding: 15px;
+       	color: #FA7471;
+       	border-bottom: 1px solid #EEEEEE;
+       	background: #FFFFFF;
+       }
+        /*弹出的二维码*/
+        
+        #mcover {
+        	position: fixed;
+        	top: 0;
+        	left: 0;
+        	width: 100%;
+        	height: 100%;
+        	background: rgba(0, 0, 0, 0.7);
+        	display: none;
+        	z-index: 20000;
+        }
+        
+        #mcover img {
+        	position: fixed;
+        	left: 50%;
+        	top: 50%;
+        	width: 260px!important;
+        	height: 260px!important;
+        	margin-left: -130px;
+        	margin-top: -130px;
+        	z-index: 20001;
+        }
+      
